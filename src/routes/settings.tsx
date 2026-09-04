@@ -97,7 +97,9 @@ function Settings() {
                 <Switch
                   checked={c.locked ? true : research}
                   disabled={c.locked}
-                  onCheckedChange={c.locked ? undefined : setResearch}
+                  onCheckedChange={(v) => {
+                    if (!c.locked) setResearch(v);
+                  }}
                 />
               </li>
             ))}

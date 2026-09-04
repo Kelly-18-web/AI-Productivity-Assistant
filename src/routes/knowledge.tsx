@@ -153,7 +153,7 @@ function Knowledge() {
                 <li key={s.id} className="rounded-lg border border-border p-3">
                   <div className="flex flex-wrap items-center gap-2">
                     <MetaBadge>{s.reference}</MetaBadge>
-                    <MetaBadge>{s.source_type}</MetaBadge>
+                    <MetaBadge>{s.doc_type}</MetaBadge>
                   </div>
                   <p className="mt-2 text-sm font-medium">{s.title}</p>
                   <p className="mt-1 line-clamp-3 text-xs text-muted-foreground">{s.content}</p>
