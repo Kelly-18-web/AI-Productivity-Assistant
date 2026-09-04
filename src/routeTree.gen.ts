@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DocumentationRouteImport } from './routes/documentation'
+import { Route as EmailRouteImport } from './routes/email'
+import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as MeetingsRouteImport } from './routes/meetings'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as PromptsRouteImport } from './routes/prompts'
+import { Route as RequirementsRouteImport } from './routes/requirements'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as ScopeGuardRouteImport } from './routes/scope-guard'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as StoriesRouteImport } from './routes/stories'
+import { Route as TasksRouteImport } from './routes/tasks'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocumentationRoute = DocumentationRouteImport.update({
+  id: '/documentation',
+  path: '/documentation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmailRoute = EmailRouteImport.update({
+  id: '/email',
+  path: '/email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeRoute = KnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeetingsRoute = MeetingsRouteImport.update({
+  id: '/meetings',
+  path: '/meetings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromptsRoute = PromptsRouteImport.update({
+  id: '/prompts',
+  path: '/prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequirementsRoute = RequirementsRouteImport.update({
+  id: '/requirements',
+  path: '/requirements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScopeGuardRoute = ScopeGuardRouteImport.update({
+  id: '/scope-guard',
+  path: '/scope-guard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoriesRoute = StoriesRouteImport.update({
+  id: '/stories',
+  path: '/stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TasksRoute = TasksRouteImport.update({
+  id: '/tasks',
+  path: '/tasks',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/documentation': typeof DocumentationRoute
+  '/email': typeof EmailRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/meetings': typeof MeetingsRoute
+  '/projects': typeof ProjectsRoute
+  '/prompts': typeof PromptsRoute
+  '/requirements': typeof RequirementsRoute
+  '/research': typeof ResearchRoute
+  '/scope-guard': typeof ScopeGuardRoute
+  '/settings': typeof SettingsRoute
+  '/stories': typeof StoriesRoute
+  '/tasks': typeof TasksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/documentation': typeof DocumentationRoute
+  '/email': typeof EmailRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/meetings': typeof MeetingsRoute
+  '/projects': typeof ProjectsRoute
+  '/prompts': typeof PromptsRoute
+  '/requirements': typeof RequirementsRoute
+  '/research': typeof ResearchRoute
+  '/scope-guard': typeof ScopeGuardRoute
+  '/settings': typeof SettingsRoute
+  '/stories': typeof StoriesRoute
+  '/tasks': typeof TasksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/documentation': typeof DocumentationRoute
+  '/email': typeof EmailRoute
+  '/knowledge': typeof KnowledgeRoute
+  '/meetings': typeof MeetingsRoute
+  '/projects': typeof ProjectsRoute
+  '/prompts': typeof PromptsRoute
+  '/requirements': typeof RequirementsRoute
+  '/research': typeof ResearchRoute
+  '/scope-guard': typeof ScopeGuardRoute
+  '/settings': typeof SettingsRoute
+  '/stories': typeof StoriesRoute
+  '/tasks': typeof TasksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/documentation'
+    | '/email'
+    | '/knowledge'
+    | '/meetings'
+    | '/projects'
+    | '/prompts'
+    | '/requirements'
+    | '/research'
+    | '/scope-guard'
+    | '/settings'
+    | '/stories'
+    | '/tasks'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/documentation'
+    | '/email'
+    | '/knowledge'
+    | '/meetings'
+    | '/projects'
+    | '/prompts'
+    | '/requirements'
+    | '/research'
+    | '/scope-guard'
+    | '/settings'
+    | '/stories'
+    | '/tasks'
+  id:
+    | '__root__'
+    | '/'
+    | '/documentation'
+    | '/email'
+    | '/knowledge'
+    | '/meetings'
+    | '/projects'
+    | '/prompts'
+    | '/requirements'
+    | '/research'
+    | '/scope-guard'
+    | '/settings'
+    | '/stories'
+    | '/tasks'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DocumentationRoute: typeof DocumentationRoute
+  EmailRoute: typeof EmailRoute
+  KnowledgeRoute: typeof KnowledgeRoute
+  MeetingsRoute: typeof MeetingsRoute
+  ProjectsRoute: typeof ProjectsRoute
+  PromptsRoute: typeof PromptsRoute
+  RequirementsRoute: typeof RequirementsRoute
+  ResearchRoute: typeof ResearchRoute
+  ScopeGuardRoute: typeof ScopeGuardRoute
+  SettingsRoute: typeof SettingsRoute
+  StoriesRoute: typeof StoriesRoute
+  TasksRoute: typeof TasksRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/documentation': {
+      id: '/documentation'
+      path: '/documentation'
+      fullPath: '/documentation'
+      preLoaderRoute: typeof DocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/email': {
+      id: '/email'
+      path: '/email'
+      fullPath: '/email'
+      preLoaderRoute: typeof EmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge': {
+      id: '/knowledge'
+      path: '/knowledge'
+      fullPath: '/knowledge'
+      preLoaderRoute: typeof KnowledgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meetings': {
+      id: '/meetings'
+      path: '/meetings'
+      fullPath: '/meetings'
+      preLoaderRoute: typeof MeetingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prompts': {
+      id: '/prompts'
+      path: '/prompts'
+      fullPath: '/prompts'
+      preLoaderRoute: typeof PromptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requirements': {
+      id: '/requirements'
+      path: '/requirements'
+      fullPath: '/requirements'
+      preLoaderRoute: typeof RequirementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scope-guard': {
+      id: '/scope-guard'
+      path: '/scope-guard'
+      fullPath: '/scope-guard'
+      preLoaderRoute: typeof ScopeGuardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stories': {
+      id: '/stories'
+      path: '/stories'
+      fullPath: '/stories'
+      preLoaderRoute: typeof StoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tasks': {
+      id: '/tasks'
+      path: '/tasks'
+      fullPath: '/tasks'
+      preLoaderRoute: typeof TasksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DocumentationRoute: DocumentationRoute,
+  EmailRoute: EmailRoute,
+  KnowledgeRoute: KnowledgeRoute,
+  MeetingsRoute: MeetingsRoute,
+  ProjectsRoute: ProjectsRoute,
+  PromptsRoute: PromptsRoute,
+  RequirementsRoute: RequirementsRoute,
+  ResearchRoute: ResearchRoute,
+  ScopeGuardRoute: ScopeGuardRoute,
+  SettingsRoute: SettingsRoute,
+  StoriesRoute: StoriesRoute,
+  TasksRoute: TasksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
